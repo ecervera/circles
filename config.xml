@@ -1,0 +1,11 @@
+    <widget id="es.uji.ecervera.circles" version="0.0.1">
+        <name>Circles</name>
+        <description>
+            A sample app
+        </description>
+        <author email="ecervera@uji.es" href="http://robinlab.uji.es">
+            Enric Cervera
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+    </widget>
