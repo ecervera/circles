@@ -1,0 +1,30 @@
+
+<canvas height="400" width="400">
+</canvas>
+
+<script>
+var canvas = document.querySelector('canvas');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle='whiteSmoke';
+ctx.fillRect(0,0,400,400);
+
+canvas.addEventListener('click',drawCircle);
+
+function drawCircle(event) {
+	var x = event.pageX - canvas.offsetLeft, 
+	    y = event.pageY - canvas.offsetTop,
+			r = 20+Math.random()*80;
+
+	ctx.beginPath();
+	ctx.arc(x,y,r,0,2*Math.PI);
+	ctx.fillStyle = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 0.5)';
+	// http://www.standardista.com/hsla-color-picker/
+	
+	//var R = Math.floor(Math.random()*256);
+	//var G = Math.floor(Math.random()*256);
+	//var B = Math.floor(Math.random()*256);
+	//ctx.fillStyle = 'rgba('+R+','+G+','+B+',0.5)';
+	ctx.fill();
+}
+
+</script>
